@@ -1,0 +1,46 @@
+@font-face {
+    font-family: MyHelvetica;
+    src: local("Helvetica Neue Bold"),
+         local("HelveticaNeue-Bold"),
+         url(MgOpenModernaBold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: MyHelvetica;
+    src: local("Helvetica Neue Bold"),
+         local("HelveticaNeue-Bold"),
+         url(MgOpenModernaBold.ttf);
+    font-weight: bold;
+  }
+  
+  body {
+    background-color: #624949;
+    color: #D4BE98;
+    font-family: 'Helvetica';
+  }
+  
+  h1 {
+    color: #d3869b;
+  }
+  
+  button {
+    background-color: #7e9c77;
+    color: #000000;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .intro {
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+  }
