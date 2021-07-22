@@ -12,10 +12,10 @@ const quiz = function aboutMeQuiz() {
 
   let questions = ['Was I born in Memphis?', 'Am I 22 years old?', 'Did I graduate from Hogwarts School of Witchcraft and Wizardry?', 'Is my high school hobby osu!?', 'Do I have a rhythm game controller?', 'Guess a number between 1 & 20.', 'Name one of my friends that streams on Twitch.'];
 
-  for (let i = 0; i < quiz.length; i++) {
-    let guess = prompt(quiz[i]).toLowerCase();
+  for (let i = 0; i < questions.length; i++) {
+    let guess = prompt(questions[i]).toLowerCase();
     if (i === 6) {
-      const friends = ['Melbo', 'Nemato', 'Tom', 'Bubba', 'Poco', 'Cortland'];
+      const friends = ["Melbo", "Nemato", "Tom", "Bubba", "Faye", "Cortland"];
       let attempts = 6;
       while (attempts !== 0) {
         if (friends.includes(guess)) {
@@ -26,7 +26,7 @@ const quiz = function aboutMeQuiz() {
         else {
           attempts--;
           if (attempts === 0) {
-            alert(`Sorry! You're out of attempts.\nAny name from this array would have been correct: ${friends}`);
+            alert(`Sorry! You're out of attempts.\nAny name from this list would have been correct: ${friends}`);
           }
           else {
             guess = prompt(`Wrong answer, try again!\n${questions[i]}\nAttempts left: ${attempts}`);
@@ -35,25 +35,23 @@ const quiz = function aboutMeQuiz() {
       }
     }
 
-    else if (i === 11) {
-      let chosenNum = Math.floor(Math.random() * 20 + 1);
-      console.log(chosenNum);
+    else if (i === 5) {
+      // Guess random number from 1-20
+      let randNum = Math.floor(Math.random() * 20 + 1);
+      console.log(randNum);
       let attempts = 4;
       while (attempts !== 0) {
-        if (parseInt(guess) === chosenNum) {
+        if (parseInt(guess) === randNum) {
           alert("Correct!");
           correctGuesses++;
           attempts = 0;
-        }
-        else {
+        } else {
           attempts--;
           if (attempts === 0) {
-            alert(`Sorry, you're out of guesses! The correct answer is ${chosenNum}.`);
-          }
-          else if (parseInt(guess) > chosenNum) {
+            alert(`Sorry, you're out of guesses! The correct answer is ${randNum}.`);
+          } else if (parseInt(guess) > randNum) {
             guess = prompt(`You guessed too high, try again!\n${questions[i]}\nAttempts left: ${attempts}`);
-          }
-          else {
+          } else {
             guess = prompt(`You guessed too low, try again!\n${questions[i]}\nAttempts left: ${attempts}`);
           }
         }
