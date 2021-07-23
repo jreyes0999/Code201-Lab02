@@ -83,4 +83,4 @@ function myQuiz() {
 }
 
 let button = document.querySelector('button');
-button.addEventListener('click', quiz);
+button.addEventListener('click', myQuiz);
